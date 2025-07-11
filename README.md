@@ -3,7 +3,7 @@
 <!-- ========================================================= -->
 
 <p align="center">
-  <img src="images/html__logo.png" alt="HTML5 Logo: stylized orange shield with white 'HTML5' text" title="HTML5 Logo" width="100%" height="100%" />
+  <img src="images/html__logo.png" alt="HTML5 Logo: stylized orange shield with white 'HTML5' text" title="HTML5 Logo"  />
 </p>
 
 <header>
