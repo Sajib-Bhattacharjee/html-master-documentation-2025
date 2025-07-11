@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Anatomy of HTML5: A Visual Reference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f0f8ff;
+        color: #03045e;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 320px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 400px;
+        }
+      }
+      .stat-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        text-align: center;
+        border-left: 5px solid #00b4d8;
+      }
+      .flow-box {
+        border: 2px solid #90e0ef;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+          0 1px 2px -1px rgb(0 0 0 / 0.1);
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="text-center py-12 px-4 bg-white shadow-md">
+      <h1 class="text-4xl md:text-6xl font-black text-[#0077B6]">
+        The Anatomy of HTML5
+      </h1>
+      <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto text-[#03045E]">
+        A visual reference to the building blocks of the modern web, updated for
+        2025. Explore the structure, purpose, and evolution of over 100
+        essential tags.
+      </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+      <section id="overview" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-2 text-[#0077B6]">
+          HTML5 at a Glance
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mb-8">
+          HTML5 is more than just a markup language; it's a comprehensive
+          standard for structuring content, creating interactive experiences,
+          and ensuring accessibility. The tags are logically grouped by their
+          primary function, providing a semantic and robust foundation for any
+          web project.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+          <div class="chart-container">
+            <canvas id="tagPurposeChart"></canvas>
+          </div>
+          <p class="text-center mt-4 text-sm text-gray-600">
+            This chart shows the proportional distribution of HTML5 tags based
+            on their main purpose. Forms and Text Content tags constitute a
+            significant portion, highlighting their importance in user
+            interaction and information delivery.
+          </p>
+        </div>
+      </section>
+
+      <section id="anatomy" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-2 text-[#0077B6]">
+          Anatomy of the Spec
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mb-8">
+          The HTML5 specification is organized into distinct categories, each
+          serving a specific role. From defining the core document structure to
+          embedding rich media and building complex tables, these categories
+          provide developers with a powerful and well-organized toolkit.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+          <div class="chart-container h-[400px] md:h-[500px]">
+            <canvas id="tagCategoryChart"></canvas>
+          </div>
+          <p class="text-center mt-4 text-sm text-gray-600">
+            A comparison of the number of tags within each official category
+            reveals the language's depth. Form-related tags are the most
+            numerous, underscoring the web's evolution as an interactive
+            platform.
+          </p>
+        </div>
+      </section>
+
+      <section id="inputs" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-2 text-[#0077B6]">
+          The Power of Input
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mb-8">
+          The humble <code>&lt;input&gt;</code> tag is a powerhouse of
+          versatility. With over 20 unique types, it provides specialized
+          controls for everything from text entry and color selection to date
+          picking and file uploads, greatly enhancing user experience and data
+          integrity.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+          <div class="chart-container h-[500px] md:h-[600px]">
+            <canvas id="inputTypesChart"></canvas>
+          </div>
+          <p class="text-center mt-4 text-sm text-gray-600">
+            The variety of input types available natively in HTML5 simplifies
+            form creation and provides consistent, accessible controls across
+            different browsers and devices without relying on external
+            JavaScript libraries.
+          </p>
+        </div>
+      </section>
+
+      <section id="semantics" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-2 text-[#0077B6]">
+          The Shift to Semantics
+        </h2>
+        <p class="text-center max-w-2xl mx-auto mb-8">
+          A core philosophy of HTML5 is to use tags that describe the *meaning*
+          of content, not just its appearance. This shift from presentational to
+          semantic markup improves accessibility, SEO, and code maintainability
+          by creating a logical document structure.
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-6 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+            <div class="flex flex-col gap-4">
+              <div class="flow-box border-red-300 bg-red-50">
+                <h4 class="font-bold text-red-800">Old Way (Deprecated)</h4>
+                <code class="text-red-600">&lt;font&gt;, &lt;center&gt;</code>
+              </div>
+              <div class="text-center text-4xl text-red-400">🚫</div>
+              <p class="text-center text-sm text-red-700">
+                These tags only described presentation and are now obsolete.
+                Styling should be handled by CSS.
+              </p>
+            </div>
+
+            <div
+              class="text-center font-bold text-4xl text-[#0077B6] hidden md:block"
+            >
+              →
+            </div>
+            <div
+              class="text-center font-bold text-4xl text-[#0077B6] md:hidden"
+            >
+              ↓
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="flow-box border-green-300 bg-green-50">
+                <h4 class="font-bold text-green-800">Modern Way (Semantic)</h4>
+                <code class="text-green-600">&lt;strong&gt;, CSS</code>
+              </div>
+              <div class="text-center text-4xl text-green-400">✅</div>
+              <p class="text-center text-sm text-green-700">
+                Semantic tags like <code>&lt;strong&gt;</code> convey
+                importance, while CSS handles all visual styling.
+              </p>
+            </div>
+            <div
+              class="text-center font-bold text-4xl text-[#0077B6] hidden md:block"
+            >
+              →
+            </div>
+            <div
+              class="text-center font-bold text-4xl text-[#0077B6] md:hidden"
+            >
+              ↓
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flow-box border-blue-300 bg-blue-50">
+                <h4 class="font-bold text-blue-800">Structural Semantics</h4>
+                <code class="text-blue-600">&lt;header&gt;, &lt;nav&gt;</code>
+              </div>
+              <div class="text-center text-4xl text-blue-400">✅</div>
+              <p class="text-center text-sm text-blue-700">
+                Tags like <code>&lt;header&gt;</code> and
+                <code>&lt;nav&gt;</code> give the document a meaningful,
+                accessible structure.
+              </p>
+            </div>
+          </div>
+          <p class="text-center mt-8 text-sm text-gray-600">
+            This flow illustrates the evolution from non-descriptive tags to a
+            modern, semantic approach that separates content structure from
+            visual presentation, which is the cornerstone of contemporary web
+            development.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center p-8 bg-[#0077B6] text-white mt-12">
+      <p>
+        &copy; 2025 HTML5 Visual Reference. All data derived from the "HTML5
+        Complete Tag & Input Reference (2025 Edition)".
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const chartColors = {
+          primary: "#0077B6",
+          secondary: "#00B4D8",
+          accent: "#90E0EF",
+          light: "#CAF0F8",
+          text: "#03045E",
+          background: "rgba(0, 180, 216, 0.2)",
+          border: "rgba(0, 119, 182, 1)",
+        };
+
+        const colorPalette = [
+          "#0077B6",
+          "#0096C7",
+          "#00B4D8",
+          "#48CAE4",
+          "#90E0EF",
+          "#ADE8F4",
+          "#CAF0F8",
+        ];
+
+        function wrapLabel(label, maxLength = 16) {
+          if (label.length <= maxLength) {
+            return label;
+          }
+          const words = label.split(" ");
+          const lines = [];
+          let currentLine = "";
+          for (const word of words) {
+            if ((currentLine + " " + word).length > maxLength) {
+              lines.push(currentLine);
+              currentLine = word;
+            } else {
+              currentLine += (currentLine ? " " : "") + word;
+            }
+          }
+          lines.push(currentLine);
+          return lines;
+        }
+
+        const customTooltip = {
+          callbacks: {
+            title: function (tooltipItems) {
+              const item = tooltipItems[0];
+              let label = item.chart.data.labels[item.dataIndex];
+              if (Array.isArray(label)) {
+                return label.join(" ");
+              } else {
+                return label;
+              }
+            },
+          },
+        };
+
+        const tagPurposeData = {
+          labels: [
+            "Forms & Inputs",
+            "Text Content",
+            "Structure & Semantics",
+            "Tables",
+            "Media",
+            "Lists",
+            "Scripting & Interactive",
+            "Metadata & Links",
+          ],
+          datasets: [
+            {
+              label: "Number of Tags",
+              data: [13, 12, 9, 10, 9, 6, 7, 7],
+              backgroundColor: colorPalette,
+              borderColor: "#FFFFFF",
+              borderWidth: 2,
+            },
+          ],
+        };
+
+        new Chart(document.getElementById("tagPurposeChart"), {
+          type: "doughnut",
+          data: tagPurposeData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "right",
+                labels: {
+                  color: chartColors.text,
+                  boxWidth: 20,
+                },
+              },
+              tooltip: customTooltip,
+              title: {
+                display: true,
+                text: "HTML5 Tag Distribution by Purpose",
+                font: { size: 18, weight: "bold" },
+                color: chartColors.text,
+                padding: { bottom: 20 },
+              },
+            },
+          },
+        });
+
+        const tagCategoryData = {
+          labels: [
+            "Form Tags",
+            "Text Content Tags",
+            "Table Tags",
+            "Structural Tags",
+            "Media Tags",
+            "Scripting/Interactive Tags",
+            "Metadata Tags",
+            "List Tags",
+            "Link & Nav Tags",
+            "Deprecated Tags",
+          ].map((label) => wrapLabel(label)),
+          datasets: [
+            {
+              label: "Tag Count",
+              data: [13, 12, 10, 9, 9, 7, 4, 6, 3, 3],
+              backgroundColor: chartColors.background,
+              borderColor: chartColors.border,
+              borderWidth: 2,
+              borderRadius: 4,
+            },
+          ],
+        };
+
+        new Chart(document.getElementById("tagCategoryChart"), {
+          type: "bar",
+          data: tagCategoryData,
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { ticks: { color: chartColors.text } },
+              y: { ticks: { color: chartColors.text } },
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: customTooltip,
+              title: {
+                display: true,
+                text: "Number of Tags per Category",
+                font: { size: 18, weight: "bold" },
+                color: chartColors.text,
+                padding: { bottom: 20 },
+              },
+            },
+          },
+        });
+
+        const inputTypesData = {
+          labels: [
+            "text",
+            "password",
+            "submit",
+            "reset",
+            "radio",
+            "checkbox",
+            "button",
+            "file",
+            "hidden",
+            "image",
+            "date",
+            "datetime-local",
+            "email",
+            "month",
+            "number",
+            "range",
+            "search",
+            "tel",
+            "time",
+            "url",
+            "week",
+            "color",
+          ],
+          datasets: [
+            {
+              label: "Input Type",
+              data: Array(22).fill(1),
+              backgroundColor: colorPalette,
+              borderWidth: 0,
+            },
+          ],
+        };
+
+        new Chart(document.getElementById("inputTypesChart"), {
+          type: "bar",
+          data: inputTypesData,
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { display: false },
+              y: { ticks: { color: chartColors.text } },
+            },
+            plugins: {
+              legend: { display: false },
+              tooltip: customTooltip,
+              title: {
+                display: true,
+                text: "The 22 Types of <input>",
+                font: { size: 18, weight: "bold" },
+                color: chartColors.text,
+                padding: { bottom: 20 },
+              },
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
