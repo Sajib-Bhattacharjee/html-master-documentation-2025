@@ -7,8 +7,7 @@
 </p>
 
 <header>
-  <h1 align="center" lang="en">HTML5 Complete Tag & Input Reference <span role="img" aria-label="blue book">📘</span></h1>
-  <p align="center"><strong>Every HTML tag and input type, updated for 2025</strong></p>
+  <h1 align="center" lang="en">HTML5 Complete Documentation <span role="img" aria-label="blue book">📘</span></h1>
 </header>
 
 <div align="center">
